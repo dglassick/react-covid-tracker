@@ -26,7 +26,7 @@ const options = {
       {
         type: 'time',
         time: {
-          format: 'MM/DD/YY',
+          parser: 'MM/DD/YY',
           tooltipFormat: 'll'
         }
       }
@@ -75,7 +75,6 @@ function LineGraph({ casesType = 'cases' }) {
         .then(data => {
           let chartData = buildChartData(data, casesType);
           setData(chartData);
-          console.log(chartData);
           // buildChart(chartData);
         });
     };

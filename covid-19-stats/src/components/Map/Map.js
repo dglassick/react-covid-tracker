@@ -5,7 +5,7 @@ import { showDataOnMap } from '../../utils/helper';
 
 function ChangeMap({ center, zoom }) {
   const map = useMap();
-  map.setView(center, zoom);
+  map.setView(center, (zoom = 4));
   return null;
 }
 
